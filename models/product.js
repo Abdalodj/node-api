@@ -17,6 +17,9 @@ class Product {
         return (`INSERT INTO PRODUCTS (location_name, catalog_name, color, size, quantity, del_flag) 
         VALUES ('${this.location_name}','${this.catalog_name}','${this.color}','${this.size}',${this.quantity},'${this.del_flag}');`);
     }
+    fielValue() {
+        return `('${this.location_name}','${this.catalog_name}','${this.color}','${this.size}',${this.quantity},'${this.del_flag}')`
+    }
 }
 
 module.exports = Product
