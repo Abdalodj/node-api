@@ -42,6 +42,7 @@ exports.uploadfile = (req, res) => {
             });
             if (result['Feuil1']) {
                 if (result['Feuil1'][0]['A'] === 'location_name') {
+                    result['Feuil1'].shift();
                     createManyProduct(fromXLSX(result['Feuil1']))
                         .then(() => {
                             res.writeHead(200, {'content-type': 'text/plain'});
