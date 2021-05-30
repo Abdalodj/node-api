@@ -1,7 +1,6 @@
 const prodModel = require('../models/product');
 const formidable = require('formidable')
 const csvToJson = require('convert-csv-to-json')
-const util = require("util");
 
 exports.createProduct = (req, res) => {
     delete req.body.id;
